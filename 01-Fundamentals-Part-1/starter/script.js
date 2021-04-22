@@ -388,3 +388,5 @@ if (dolphins > koalas && dolphins >= 100){
 //The Switch Statement
 //Switch merupakan alternative dari if else , untuk membandingkan nilaisss
 
+let orangIseng = 4;
+
