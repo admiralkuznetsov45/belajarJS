@@ -388,5 +388,42 @@ if (dolphins > koalas && dolphins >= 100){
 //The Switch Statement
 //Switch merupakan alternative dari if else , untuk membandingkan nilaisss
 
-let orangIseng = 4;
+let day = "monday";
+
+switch(day){
+    case 'monday':
+        console.log("Hari ini merupakan hari senin");
+        break
+        case 'tuesday':
+        console.log("hari ini merupakan hari selasa");
+        break
+    case 'wendesday' :
+        console.log("Hari ini merupakan hari rabu");
+        break
+    case 'thursday':
+        break
+    default:
+        console.log("Bukan Hari yang tepat")''
+}
+
+//Challenge The Switch Operator
+let language = "chinese";
+
+switch(language){
+    case 'chinese':
+        console.log("Most number of native speakers");
+        break
+    case 'Spainish':
+        console.log("2nd place in number of native speakers'a");
+        break
+    case 'english' :
+        console.log("3rd place");
+        break
+    case 'hindi':
+        console.log("Fourth Place");
+        break
+    default:
+        console.log("Great Language tooo");
+}
+
 
