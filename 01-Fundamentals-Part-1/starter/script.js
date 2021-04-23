@@ -383,7 +383,7 @@ if (dolphins > koalas && dolphins >= 100){
     console.log("draw");
 } else {
     console.log("Kalah semua");
-}*/
+}
 
 //The Switch Statement
 //Switch merupakan alternative dari if else , untuk membandingkan nilaisss
@@ -425,5 +425,23 @@ switch(language){
     default:
         console.log("Great Language tooo");
 }
+
+/*
+Expression vs Value 
+Expression merupakan kode yang menghasilkan nilai 
+Statement merupakan kode yang menjalankan perintah tapi belum tentu menjalankan 
+*/
+//The Conditional Ternary Operator merupakan alternatif dari if else statement
+const age = 23;
+age >= 18 ? console.log("i like to drink wine"): console.log("haram");
+const usia = 14;
+const minum = usia >= 19 ? "wine" : "aqua" ; 
+console.log(minum)
+console.log(`aku suka minum ${usia >= 19 ? "wine" : "aqua"}`);
+
+//Challenge The Conditional Ternary Operator
+const population = 250 ; 
+const indonesia = population >= 33 ? "Penduduk Indonesia kebanyakan" : "Penduduk Indonesia terlalu sedikit";
+console.log(indonesia);
 
 
