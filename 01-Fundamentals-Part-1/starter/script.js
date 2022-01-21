@@ -430,7 +430,7 @@ switch(language){
 Expression vs Value 
 Expression merupakan kode yang menghasilkan nilai 
 Statement merupakan kode yang menjalankan perintah tapi belum tentu menjalankan 
-*/
+
 //The Conditional Ternary Operator merupakan alternatif dari if else statement
 const age = 23;
 age >= 18 ? console.log("i like to drink wine"): console.log("haram");
@@ -445,3 +445,25 @@ const indonesia = population >= 33 ? "Penduduk Indonesia kebanyakan" : "Penduduk
 console.log(indonesia);
 
 
+//Coding Challenge #4
+const bill = 430 ;
+const tip = bill <= 300 && bill >= 50 ? bill * 0.15 : bill * 0.2;
+console.log(`The bill was ${bill} , the tip was ${tip} , and total is ${bill + tip}`);
+
+
+//Arrow Function
+//Fungsi sederhana dan lebih cepat dari Fungsi normal menggunakan tanda panah
+
+const calcAge3 = birthYear => 2037 - birthYear ;
+*/
+//Fungsi dengan multibaris
+
+const yearsUntillRetirement = birthYear = {
+    const age = 2037 - birthYear; 
+    const retirement = 65 - age;
+    
+    //masih butuh returun
+    return retirement;
+}
+
+console.log(yearsUntillRetirement(1965));

@@ -34,8 +34,6 @@ const secretNumber = Math.trunc(Math.random() *10) +1;
 let score = 20;
 let highscore = 0
 
-const displayMessage = function(message){ document.querySelector('.message').textContent = message };
-
 //fungsi untuk click
 document.querySelector('.check').addEventListener('click' ,function(){
 
@@ -47,12 +45,12 @@ document.querySelector('.check').addEventListener('click' ,function(){
 
     //jika isi kosong
     if (!guess){
-        displayMessage("No Number")
+        document.querySelector('.message').textContent = "No Number";
     }
 
     //jika sesuai angka
     else if (guess === secretNumber) {
-        displayMessage("Correct Number")
+        document.querySelector('.message').textContent = "Correct Number";
         //DOM untuk mengganti warna css
         document.querySelector('body').style.backgroundColor = `#60b347`;
         document.querySelector('.number').style.width = `30rem`;
@@ -68,35 +66,35 @@ document.querySelector('.check').addEventListener('click' ,function(){
     }
 
     //jika lebih dari angka yang ditentukan
-    else if (guess !== secretNumber) {
+    else if (guess > secretNumber) {
+        document.querySelector('.message').textContent = "Too High";
 
         if (score > 1 ){
-        displayMessage(guess > secretNumber ? 'Too High' : 'Too Low';) //Ternary Operator
         //skor berkurang
         score--
         //menampilkan score ke layar
         document.querySelector('.score').textContent = score;
         } else { //apabila skor dibawah 1 
-            displayMessage("You Lost The Game")
+            document.querySelector('.message').textContent = "You lost the game"
             document.querySelector('.score').textContent = 0;
             
         }
     }
 
-    // else if (guess < secretNumber) {
-    //     document.querySelector('.message').textContent = "Too Low";
+    else if (guess < secretNumber) {
+        document.querySelector('.message').textContent = "Too Low";
 
-    //     if (score > 1 ){ 
-    //         //skor berkurang
-    //         score--
-    //         //menampilkan score ke layar
-    //         document.querySelector('.score').textContent = score;
-    //         } else { //apabila skor dibawah 1 
-    //             document.querySelector('.message').textContent = "You lost the game"
-    //             document.querySelector('body').style.backgroundColor = `#FF0000`;
-    //             document.querySelector('.score').textContent = 0;
-    //         }
-    // }
+        if (score > 1 ){ 
+            //skor berkurang
+            score--
+            //menampilkan score ke layar
+            document.querySelector('.score').textContent = score;
+            } else { //apabila skor dibawah 1 
+                document.querySelector('.message').textContent = "You lost the game"
+                document.querySelector('body').style.backgroundColor = `#FF0000`;
+                document.querySelector('.score').textContent = 0;
+            }
+    }
 })
 
 //Fungsi untuk reset again semuanya
@@ -105,7 +103,7 @@ document.querySelector('.again').addEventListener('click' ,function(){
     score = 20;
     const secretNumber = Math.trunc(Math.random() *20) +1;
 
-    displayMessage("Start guessing...")
+    document.querySelector('.message').textContent = "Start guessing...";
 
     document.querySelector('.score').textContent = score;
 
